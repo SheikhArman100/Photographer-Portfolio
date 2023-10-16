@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './sections/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -12,6 +13,15 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors:{
+        "customGreen":"hsl(125,19%,25%)",
+        "customWhite":"hsl(300,100%,100%)",
+        "customOrange":"hsl(13,98%,60%)",
+        "customBlack":"hsl(48,9%,11%)",
+        "customYellow":"hsl(49,98%,55%)",
+        "customOffWhite":"hsl(42,50%,92%)"
+        
+      }
     },
   },
   plugins: [],
