@@ -29,7 +29,7 @@ import {
 
 const HeroSection = () => {
   return (
-    <div className="h-screen w-full  ">
+    <section className="h-screen w-full bg-customGreen text-customWhite ">
       <div className="h-[75%] w-full py-4  px-[3rem] lg:px-[6rem] ">
         <Navbar />
         {/* middle part */}
@@ -170,7 +170,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
