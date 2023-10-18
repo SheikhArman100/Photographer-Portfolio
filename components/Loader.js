@@ -21,9 +21,9 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 const Loader = ({setIsLoading}) => {
-  const imageList = useMemo(() => [image1, image2, image3, image4, image5,image6,image7,image8,image9,image10], []);
   const [imageIndex, setImageIndex] = useState(0)
   const [changeImageIndex, setChangeImageIndex] = useState(false)
+  const imageList = useMemo(() => [image1, image2, image3, image4, image5,image6,image7,image8,image9,image10], []);
 
   useEffect(() => {
     let interval
