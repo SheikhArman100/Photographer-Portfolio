@@ -53,6 +53,7 @@ const HeroSection = () => {
                 <Image
                   src={image12}
                   fill
+                  sizes="(min-width: 1040px) 352px, 288px"
                   placeholder="blur"
                   alt="hero image"
                   className="object-cover w-full h-full rounded-t-full"
@@ -97,6 +98,7 @@ const HeroSection = () => {
                     <Image
                       src={image9}
                       fill
+                      sizes="(min-width: 1040px) 128px, 112px"
                       placeholder="blur"
                       alt="right pic"
                       className="object-cover h-full w-full"
@@ -125,6 +127,7 @@ const HeroSection = () => {
             <Image
               src={camera}
               fill
+              sizes="(min-width: 1040px) 144px, 128px"
               alt="camera"
               className="object-cover w-full h-full"
             />
@@ -153,6 +156,7 @@ const HeroSection = () => {
               <Image
                 src={image11}
                 fill
+                sizes="(min-width: 1040px) 144px, 128px"
                 placeholder="blur"
                 className="w-full h-full object-cover"
                 alt="image 2"
