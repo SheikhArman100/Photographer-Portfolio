@@ -3,7 +3,8 @@ export const sectionAnimation = {
   view: {
     transition: {
       delayChildren: 0.5,
-      staggerChildren:0.2
+      staggerChildren:0.2,
+      ease:"linear"
     },
   },
 };
@@ -28,6 +29,7 @@ export const containerOpacityAnimation = {
       duration: 0.6,
       delayChildren: 0.5,
       staggerChildren: 0.3,
+      ease:"linear"
     },
   },
 };
@@ -40,6 +42,7 @@ export const containerScaleAnimation = {
       duration: 0.7,
       delayChildren: 0.7,
       staggerChildren: 0.3,
+      ease:"linear"
     },
   },
 };
@@ -50,7 +53,8 @@ export const marqueeContainer={
   view:{
     opacity:1,
     transition:{
-      duration:0.4
+      duration:0.1,
+      ease:"linear"
 
     }
   }
@@ -129,7 +133,7 @@ export const buttonItems={
   view:{
     opacity:1,
     transition:{
-      duration:0.4,
+      duration:0.1,
       ease:"linear",
     }
   }
