@@ -15,10 +15,9 @@ export const middleContainerItems = {
   },
   show: {
     opacity:1,
-    duration:0.3,
-
+    
     transition: {
-      // duration:0.4,
+      duration:0.3,
       ease:"linear"
       
     },

@@ -12,7 +12,7 @@ const PageWrapper = ({children}) => {
         {isLoading ? (
           <Loader setIsLoading={setIsLoading} />
         ) : (
-          <motion.div variants={staggerContainer(0.2,0.5)} initial="hidden" animate="show" className="w-full min-h-screen bg-customGreen   text-customWhite">
+          <motion.div variants={staggerContainer(0.2,0.5)} initial="hidden" animate="show" className="w-full min-h-screen ">
             {children}
           </motion.div>
         )}
