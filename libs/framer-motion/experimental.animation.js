@@ -132,7 +132,6 @@ export const buttonItems={
   view:{
     opacity:1,
     transition:{
-      
       ease:"linear",
     }
   }
