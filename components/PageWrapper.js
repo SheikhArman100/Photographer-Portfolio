@@ -5,7 +5,7 @@ import { AnimatePresence ,motion} from "framer-motion";
 import { staggerContainer } from "@/libs/framer-motion/prebuild.animation";
 
 const PageWrapper = ({children}) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <AnimatePresence mode="wait">
       <div>
