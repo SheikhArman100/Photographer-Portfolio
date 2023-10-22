@@ -53,7 +53,6 @@ export const marqueeContainer={
   view:{
     opacity:1,
     transition:{
-      duration:0.1,
       ease:"linear"
 
     }
@@ -133,7 +132,7 @@ export const buttonItems={
   view:{
     opacity:1,
     transition:{
-      duration:0.1,
+      
       ease:"linear",
     }
   }
