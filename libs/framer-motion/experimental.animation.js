@@ -8,31 +8,19 @@ export const sectionAnimation = {
     },
   },
 };
-// export const sectionItemsAnimation = {
-//   hidden: { opacity: 0 },
+
+// export const containerOpacityAnimation = {
+//   hidden: { 
+//     opacity:0 ,
+// },
 //   view: {
 //     opacity: 1,
-//     transition: {
-//       duration: 3,
-//       delayChildren: 4,
-//       staggerChildren: 0.2,
+//    transition: {
+//       duration: 0.6,
+//       ease:"linear"
 //     },
 //   },
 // };
-export const containerOpacityAnimation = {
-  hidden: { 
-    opacity:0 ,
-},
-  view: {
-    opacity: 1,
-   transition: {
-      duration: 0.6,
-      delayChildren: 0.5,
-      staggerChildren: 0.3,
-      ease:"linear"
-    },
-  },
-};
 
 export const containerScaleAnimation = {
   hidden: { scaleX: 0 },

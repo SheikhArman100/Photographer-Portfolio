@@ -24,12 +24,13 @@ const ExperimentalProject = () => {
       variants={sectionAnimation}
       initial="hidden"
       whileInView="view"
+      viewport={{
+            once:true
+          }}
       className="h-screen w-full bg-customOffWhite text-customBlack flex flex-col "
     >
-      <motion.div
-        variants={containerOpacityAnimation}
-        initial="hidden"
-        whileInView="view"
+      <div
+        
         className="w-full h-16 flex items-center justify-between origin-right "
       >
         <div className="h-full flex-[1_1_60%] flex items-center justify-center  border-r border-b border-customBlack gap-x-1">
@@ -46,11 +47,14 @@ const ExperimentalProject = () => {
           <p className="text-xl uppercase font-[700] font2">Commercial</p>
           <span className="mb-4 text-sm font-bold font2">74</span>
         </div>
-      </motion.div>
+      </div>
       <motion.div
         variants={containerScaleAnimation}
         initial="hidden"
         whileInView="view"
+        viewport={{
+            once:true
+          }}
         className="h-16 overflow-hidden origin-left  border-b border-customBlack "
       >
         <motion.div variants={marqueeContainer} className="w-fit h-full">
@@ -105,6 +109,9 @@ const ExperimentalProject = () => {
         variants={containerOpacityAnimation}
         initial="hidden"
         whileInView="view"
+        viewport={{
+            once:true
+          }}
         className="relative w-full h-full grid grid-cols-2"
       >
         <div className="flex flex-col justify-center  pl-[4rem] lg:pl-[7rem] ">
