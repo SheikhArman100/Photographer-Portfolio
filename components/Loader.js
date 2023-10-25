@@ -5,6 +5,10 @@ import {
   LoaderContainer2,
   block,
   block2,
+  imageAnimation,
+  imageBlock,
+  imageContainer,
+  loaderContainer2,
 } from "@/libs/framer-motion/Loader.animation";
 import image1 from "@/public/assets/image1.jpg";
 import image10 from "@/public/assets/image10.jpg";
@@ -21,79 +25,49 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 const Loader = ({ setIsLoading }) => {
-  const imageList = useMemo(
-    () => [
-      image1,
-      image2,
-      image3,
-      image4,
-      image5,
-      image6,
-      image7,
-      image8,
-      image9,
-      image10,
-    ],
-    []
-  );
-  const [imageIndex, setImageIndex] = useState(0);
-  const [changeImageIndex, setChangeImageIndex] = useState(false);
-
-  useEffect(() => {
-    let interval;
-    if (changeImageIndex) {
-      interval = setInterval(() => {
-        setImageIndex((prev) => (prev < 9 ? prev + 1 : prev));
-      }, 300);
-      // After 1500 milliseconds (2 seconds), set changeImageIndex back to false
-      setTimeout(() => {
-        setChangeImageIndex(false);
-      }, 3000);
-    }
-
-    return () => {
-      clearInterval(interval); // Clear the interval when the component unmounts
-    };
-  }, [imageIndex, changeImageIndex]);
 
   return (
     <div className="relative w-full h-screen bg-customGreen">
-      <motion.div
-        variants={LoaderContainer}
-        initial="hidden"
-        animate="show"
-        className="w-full h-full bg-customOffWhite flex items-center justify-center  origin-top"
-      >
-        <motion.div
-          variants={ImageContainer}
-          className="relative w-80 aspect-[1/1.5] bg-customOffWhite "
-        >
-          <motion.div
-            variants={block}
-            onAnimationComplete={() => setChangeImageIndex(true)}
-            className="absolute w-full h-full inset-0 bg-customOffWhite origin-top z-[1]"
-          />
-          <motion.div
-            variants={block2}
-            className="absolute w-full h-full inset-0 bg-customOffWhite origin-top z-[1]"
-          />
-          <Image
-            src={imageList[imageIndex]}
-            fill
-            priority
-            sizes="320px"
-            className="object-cover w-full h-full "
-            alt="loader image"
-          />
+      <motion.div variants={LoaderContainer} initial="hidden" animate="show" className="absolute inset-0 h-full w-full bg-customOffWhite origin-top flex items-center justify-center">
+        <motion.div variants={imageContainer} className="relative w-80 aspect-[1/1.5]  overflow-hidden">
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image1} fill priority sizes="320px" className="h-full w-full object-cover" alt="image1"/>
+          </motion.div>
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image2} fill priority sizes="320px" className="h-full w-full object-cover" alt="image2"/>
+          </motion.div>
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image3} fill priority sizes="320px" className="h-full w-full object-cover" alt="image3"/>
+          </motion.div>
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image4} fill priority sizes="320px" className="h-full w-full object-cover" alt="image4"/>
+          </motion.div>
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image5} fill priority sizes="320px" className="h-full w-full object-cover" alt="image5"/>
+          </motion.div>
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image6} fill priority sizes="320px" className="h-full w-full object-cover" alt="image6"/>
+          </motion.div>
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image7} fill priority sizes="320px" className="h-full w-full object-cover" alt="image7"/>
+          </motion.div>
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image8} fill priority sizes="320px" className="h-full w-full object-cover" alt="image8"/>
+          </motion.div>
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image9} fill priority sizes="320px" className="h-full w-full object-cover" alt="image9"/>
+          </motion.div>
+          <motion.div  variants={imageAnimation}  className="absolute inset-0 h-full w-full ">
+            <Image src={image10} fill priority sizes="320px" className="h-full w-full object-cover" alt="image10"/>
+          </motion.div>
+          {/* //!image block */}
+          <motion.div  variants={imageBlock}  className="absolute inset-0 h-full w-full bg-customOffWhite "/>
+          
+
+
         </motion.div>
       </motion.div>
-      <motion.div
-        variants={LoaderContainer2}
-        initial="hidden"
-        animate="show"
-        onAnimationComplete={() => setIsLoading(false)}
-        className="w-full h-full absolute inset-0 bg-customGreen flex items-center justify-center  origin-bottom z-[2]"
-      />
+      <motion.div variants={loaderContainer2} initial="hidden" animate="show" className="absolute inset-0 h-full w-full bg-customGreen origin-bottom" onAnimationComplete={()=>setIsLoading(false)}/>
     </div>
   );
 };
