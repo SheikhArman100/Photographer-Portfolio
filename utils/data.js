@@ -5,18 +5,18 @@ export const navItems=[
     },
     {
         name:"Portfolio",
-        link:"/portfolio"
+        link:"/"
     },
     {
         name:"Projects",
-        link:"/projects"
+        link:"/"
     },
     {
         name:"Blog",
-        link:"/about"
+        link:"/"
     },
     {
         name:"Studio",
-        link:"/studio"
+        link:"/"
     }
 ]
