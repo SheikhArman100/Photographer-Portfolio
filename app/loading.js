@@ -1,9 +1,8 @@
 import React from 'react'
 
-const loading = () => {
+export default function Loading(){
   return (
     <div className='w-full h-screen flex items-center justify-center'>loading.......</div>
   )
 }
 
-export default loading
