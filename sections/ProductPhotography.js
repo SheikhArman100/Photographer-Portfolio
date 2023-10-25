@@ -45,6 +45,7 @@ const ProductPhotography = () => {
             >
               <Image
                 src={image15}
+                fill
                 placeholder="blur"
                 className="w-full h-full object-cover"
                 alt="product left image"
@@ -73,6 +74,7 @@ const ProductPhotography = () => {
             >
               <Image
                 src={image16}
+                fill
                 placeholder="blur"
                 className="w-full h-full object-cover"
                 alt="product left image"

@@ -56,7 +56,7 @@ const Footer = () => {
             </li>
 
             <li className="py-2 px-3 border bg-customWhite text-customBlack text-xs font-bold rounded-full flex items-center gap-x-1">
-              sheikharman@gmail.com{" "}
+              sheikharman100@gmail.com
               <ArrowRight size={16} className="-rotate-45" />
             </li>
           </ul>

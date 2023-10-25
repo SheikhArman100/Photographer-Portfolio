@@ -146,6 +146,7 @@ const ExperimentalProject = () => {
             <Image
               src={image2}
               fill
+              sizes="400px"
               placeholder="blur"
               alt="experimental image"
               className="w-full h-full object-cover rounded-t-full"

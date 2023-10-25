@@ -44,14 +44,14 @@ const AppointmentSection = () => {
       <div className='flex-[1_1_100%] w-full  flex items-center justify-between px-[3rem] lg:px-[6rem]'>
             <motion.div variants={ImageContainer} className='flex flex-col gap-y-1'>
                 <div className='relative h-48 aspect-[1.8/2]'>
-                    <Image src={image13} fill placeholder='blur' alt='appointment left image' className='w-full h-full object-cover '/>
+                    <Image src={image13}  fill sizes="173px" placeholder='blur' alt='appointment left image' className='w-full h-full object-cover '/>
                     <motion.div variants={ImageAnimation} className="absolute h-full w-full bg-customOffWhite origin-right"/>
                 </div>
                 <motion.p variants={ImageText} className='flex items-center gap-x-3 font2 text-sm font-bold uppercase'><span className="text-sm font2 font-medium">01/</span>Men-with-flowers</motion.p>
             </motion.div>
             <motion.div variants={ImageContainer} className='flex flex-col gap-y-1'>
                 <div className='relative  h-48 aspect-[1.8/2]'>
-                    <Image src={image14} fill placeholder='blur' alt='appointment right image' className='w-full h-full object-cover '/>
+                    <Image src={image14} fill sizes="173px" placeholder='blur' alt='appointment right image' className='w-full h-full object-cover '/>
                      <motion.div variants={ImageAnimation} className="absolute h-full w-full bg-customOffWhite origin-left"/>
                 </div>
                 <motion.p variants={ImageText} className='flex items-center gap-x-3 font2 text-sm font-bold uppercase'><span className="text-sm font2 font-medium">02/</span>Men-with-flowers</motion.p>
@@ -70,7 +70,7 @@ const AppointmentSection = () => {
 
         </div>
         <div className='absolute bottom-0 left-1/2 -translate-x-1/2 h-[75%] w-[22rem] rounded-t-full'>
-            <Image src={image7} className='w-full h-full object-cover rounded-t-full' fill placeholder='blur' alt='appointment center image'/>
+            <Image src={image7} className='w-full h-full object-cover rounded-t-full' fill sizes="352px" placeholder='blur' alt='appointment center image'/>
         </div>
     </motion.section>
   );
