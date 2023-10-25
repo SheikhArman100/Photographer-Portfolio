@@ -34,6 +34,8 @@ const AestheticSection = () => {
         <Image
           src={image3}
           fill
+          sizes="352px"
+          placeholder="blur"
           className="h-full w-full object-cover"
           alt="aesthetic pic1"
         />
@@ -45,6 +47,8 @@ const AestheticSection = () => {
         <Image
           src={image6}
           fill
+          sizes="320px"
+          placeholder="blur"
           className="h-full w-full object-cover"
           alt="aesthetic pic2"
         />
@@ -57,6 +61,8 @@ const AestheticSection = () => {
         <Image
           src={image8}
           fill
+          sizes="160px"
+          placeholder="blur"
           className="h-full w-full object-cover"
           alt="aesthetic pic3"
         />
@@ -68,6 +74,8 @@ const AestheticSection = () => {
         <Image
           src={image10}
           fill
+          sizes="224px"
+          placeholder="blur"
           className="h-full w-full object-cover"
           alt="aesthetic pic4"
         />

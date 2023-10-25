@@ -21,6 +21,7 @@ const ContactMe = () => {
           <Image
             src={image4}
             fill
+            sizes="288px"
             placeholder="blur"
             className=" w-full h-full object-cover rounded-full"
             alt="contact me image"
