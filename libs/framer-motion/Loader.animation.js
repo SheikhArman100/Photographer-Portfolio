@@ -1,6 +1,6 @@
 export const LoaderContainer={
     hidden:{
-        scaleY:0
+        scaleY:0,
     },
     show:{
         scaleY:1,
@@ -49,7 +49,7 @@ export const ImageContainer={
 }
 export const block={
     hidden:{
-        scaleY:1
+        scaleY:1,
     },
     show:{
         scaleY:0,

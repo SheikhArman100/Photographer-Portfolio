@@ -29,7 +29,7 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="h-screen w-full bg-customGreen text-customWhite ">
+    <section  className="h-screen w-full bg-customGreen text-customWhite ">
       <div className="h-[75%] w-full py-4  px-[3rem] lg:px-[6rem] ">
         <Navbar />
         {/* middle part */}
@@ -54,7 +54,7 @@ const HeroSection = () => {
                   src={image12}
                   fill
                   sizes="(min-width: 1040px) 352px, 288px"
-                  placeholder="blur"
+                  priority
                   alt="hero image"
                   className="object-cover w-full h-full rounded-t-full"
                 />

@@ -6,24 +6,36 @@ import {
   block,
   block2,
 } from "@/libs/framer-motion/Loader.animation";
+import image1 from "@/public/assets/image1.jpg";
+import image10 from "@/public/assets/image10.jpg";
+import image2 from "@/public/assets/image2.jpg";
+import image3 from "@/public/assets/image3.jpg";
+import image4 from "@/public/assets/image4.jpg";
+import image5 from "@/public/assets/image5.jpg";
+import image6 from "@/public/assets/image6.jpg";
+import image7 from "@/public/assets/image7.jpg";
+import image8 from "@/public/assets/image8.jpg";
+import image9 from "@/public/assets/image9.jpg";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-
-const imageList = [
-  "image1.jpg",
-  "image2.jpg",
-  "image3.jpg",
-  "image4.jpg",
-  "image5.jpg",
-  "image6.jpg",
-  "image7.jpg",
-  "image8.jpg",
-  "image9.jpg",
-  "image10.jpg",
-];
+import { useEffect, useMemo, useState } from "react";
 
 const Loader = ({ setIsLoading }) => {
+  const imageList = useMemo(
+    () => [
+      image1,
+      image2,
+      image3,
+      image4,
+      image5,
+      image6,
+      image7,
+      image8,
+      image9,
+      image10,
+    ],
+    []
+  );
   const [imageIndex, setImageIndex] = useState(0);
   const [changeImageIndex, setChangeImageIndex] = useState(false);
 
@@ -66,7 +78,7 @@ const Loader = ({ setIsLoading }) => {
             className="absolute w-full h-full inset-0 bg-customOffWhite origin-top z-[1]"
           />
           <Image
-            src={`/assets/${imageList[imageIndex]}`}
+            src={imageList[imageIndex]}
             fill
             priority
             sizes="320px"
