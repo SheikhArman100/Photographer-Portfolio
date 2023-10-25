@@ -6,7 +6,7 @@ import { staggerContainer } from "@/libs/framer-motion/prebuild.animation";
 import Lenis from "@studio-freight/lenis";
 
 const PageWrapper = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const lenis = new Lenis({
