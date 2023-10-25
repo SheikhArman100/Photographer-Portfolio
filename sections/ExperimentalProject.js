@@ -20,13 +20,11 @@ import image2 from "@/public/assets/image2.jpg";
 
 const ExperimentalProject = () => {
   return (
-    <section
+    <motion.section
       variants={sectionAnimation}
       initial="hidden"
       whileInView="view"
-      viewport={{
-            once:true
-          }}
+      viewport={{once:true}}
       className="h-screen w-full bg-customOffWhite text-customBlack flex flex-col "
     >
       <div
@@ -52,9 +50,8 @@ const ExperimentalProject = () => {
         variants={containerScaleAnimation}
         initial="hidden"
         whileInView="view"
-        viewport={{
-            once:true
-          }}
+        viewport={{once:true}}
+        
         className="h-16 overflow-hidden origin-left  border-b border-customBlack "
       >
         <motion.div variants={marqueeContainer} className="w-fit h-full">
@@ -109,14 +106,13 @@ const ExperimentalProject = () => {
         variants={containerOpacityAnimation}
         initial="hidden"
         whileInView="view"
-        viewport={{
-            once:true
-          }}
+        viewport={{once:true}}
+      
         className="relative w-full h-full grid grid-cols-2"
       >
         <div className="flex flex-col justify-center  pl-[4rem] lg:pl-[7rem] ">
           <span
-            variants={textContainer}
+           
             className="text-customOrange flex items-center gap-x-2 text-sm font-bold uppercase font2 relative "
           >
             <motion.div variants={textContainer}  className="absolute w-full h-full bg-customOffWhite origin-right"/>
@@ -168,7 +164,7 @@ const ExperimentalProject = () => {
           </div>
         </div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

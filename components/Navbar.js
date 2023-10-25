@@ -20,7 +20,7 @@ const Navbar = () => {
         
         className="flex items-center justify-start gap-x-2 flex-grow"
       >
-        <motion.svg variants={NavLogo} xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"  stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-sparkle stroke-transparent fill-customOrange"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/></motion.svg>
+        <motion.svg variants={NavLogo} xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"  strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sparkle stroke-transparent fill-customOrange"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/></motion.svg>
         {/* <Sparkle size={34} className="stroke-transparent fill-customOrange" /> */}
         <span className="md:text-xl lg:text-2xl font-semibold">Charlotte</span>
       </motion.div>

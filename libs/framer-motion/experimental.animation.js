@@ -2,25 +2,25 @@ export const sectionAnimation = {
   hidden: {},
   view: {
     transition: {
-      delayChildren: 0.5,
+      delayChildren: 0.8,
       staggerChildren:0.2,
       ease:"linear"
     },
   },
 };
 
-// export const containerOpacityAnimation = {
-//   hidden: { 
-//     opacity:0 ,
-// },
-//   view: {
-//     opacity: 1,
-//    transition: {
-//       duration: 0.6,
-//       ease:"linear"
-//     },
-//   },
-// };
+export const containerOpacityAnimation = {
+  hidden: { 
+    opacity:0 ,
+},
+  view: {
+    opacity: 1,
+   transition: {
+      duration: 0.6,
+      ease:"linear"
+    },
+  },
+};
 
 export const containerScaleAnimation = {
   hidden: { scaleX: 0 },
@@ -68,9 +68,9 @@ export const circleScale={
   view:{
     scale:1,
     transition:{
-      duration:0.3,
+      duration:0.8,
       ease:"linear",
-      delayChildren:0.3
+      delayChildren:0.8
     }
   }
 }
@@ -95,7 +95,7 @@ export const textContainer={
   view:{
     scaleX:0,
     transition:{
-      duration:1,
+      duration:4,
       ease:"linear",
     }
   }
@@ -107,9 +107,9 @@ export const buttonContainer={
   view:{
     scaleY:1,
     transition:{
-      duration:0.5,
+      duration:1,
       ease:"linear",
-      delayChildren:0.5
+      delayChildren:1
     }
   }
 }
@@ -120,6 +120,7 @@ export const buttonItems={
   view:{
     opacity:1,
     transition:{
+      // duration:0.4,
       ease:"linear",
     }
   }

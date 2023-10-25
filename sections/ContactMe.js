@@ -1,9 +1,17 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import image4 from "@/public/assets/image4.jpg";
 import circleTextImage from "@/public/assets/circleText.svg";
 import camera from "@/public/assets/camera.png";
 import { ArrowRight, Play, Sparkle } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  containerAnimation,
+  scaleContainer,
+  scaleContainerText,
+  sectionAnimation,
+} from "@/libs/framer-motion/contactme.animation";
 
 const ContactMe = () => {
   return (
@@ -26,8 +34,17 @@ const ContactMe = () => {
             </div>
           </div>
         </div>
-        <div className="h-full w-full px-[3rem] lg:px-[6rem] flex items-center justify-between">
-          <div className="flex flex-col items-center ">
+        <motion.div
+          variants={sectionAnimation}
+          initial="hidden"
+          whileInView="view"
+          viewport={{once:true}}
+          className="h-full w-full px-[3rem] lg:px-[6rem] flex items-center justify-between"
+        >
+          <motion.div
+            variants={containerAnimation}
+            className="flex flex-col items-center "
+          >
             <div className=" flex mt-6">
               <span className="text-customOrange md:text-6xl lg:text-7xl font-bold mr-4">
                 “
@@ -39,7 +56,7 @@ const ContactMe = () => {
                 <span className="text-customOrange">perfection</span>
               </p>
             </div>
-            <div className="h-48 aspect-square rotate-[35deg] ">
+            <div className="relative h-48 aspect-square rotate-[35deg] ">
               <Image
                 src={camera}
                 fill
@@ -48,11 +65,11 @@ const ContactMe = () => {
                 className="object-cover w-full h-full"
               />
             </div>
-          </div>
-          <div className="">
+          </motion.div>
+          <motion.div variants={containerAnimation} className="">
             <h4 className="font2 uppercase text-customOrange text-sm font-semibold flex items-center gap-x-2 text-center">
               <div className="h-1 w-1 rounded-full bg-customOrange" />
-              Product Photography
+              Contact Me
             </h4>
             <h2 className="text-4xl font-semibold  mt-2">
               I explore styles <br /> every week, enjoy <br /> my work
@@ -62,21 +79,22 @@ const ContactMe = () => {
                 Book a call <ArrowRight />
               </div>
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-       <div className='w-full h-[4.5rem] border-t border-b border-customOffWhite flex items-center justify-center gap-x-2'>
-            <h3 className='text-3xl  font-semibold'>Infographics</h3>
-            <Sparkle size={32} className='fill-customOrange stroke-none'/>
-            <h3 className='text-3xl  font-semibold'>Branding</h3>
-            <Sparkle size={32} className='fill-customOrange stroke-none'/>
-            <h3 className='text-3xl  font-semibold'>Art Direction</h3>
-            <Sparkle size={32} className='fill-customOrange stroke-none'/>
-            <h3 className='text-3xl  font-semibold'>Production</h3>
-            <Sparkle size={32} className='fill-customOrange stroke-none'/>
-            <h3 className='text-3xl  font-semibold'>Mural Drawing</h3>
-            
-        </div>
+      <motion.div variants={scaleContainer} initial="hidden" whileInView="view" viewport={{once:true}} className="w-full h-[4.5rem] border-t border-b border-customOffWhite origin-left ">
+        <motion.div variants={scaleContainerText} className="h-full flex items-center justify-center gap-x-2">
+          <h3 className="text-3xl  font-semibold">Infographics</h3>
+          <Sparkle size={32} className="fill-customOrange stroke-none" />
+          <h3 className="text-3xl  font-semibold">Branding</h3>
+          <Sparkle size={32} className="fill-customOrange stroke-none" />
+          <h3 className="text-3xl  font-semibold">Art Direction</h3>
+          <Sparkle size={32} className="fill-customOrange stroke-none" />
+          <h3 className="text-3xl  font-semibold">Production</h3>
+          <Sparkle size={32} className="fill-customOrange stroke-none" />
+          <h3 className="text-3xl  font-semibold">Mural Drawing</h3>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
