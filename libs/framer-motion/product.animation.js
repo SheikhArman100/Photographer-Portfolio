@@ -2,7 +2,7 @@ export const sectionAnimation = {
   hidden: {},
   view: {
     transition: {
-      staggerChildren: 0.8,
+      staggerChildren: 0.5,
     },
   },
 };
@@ -71,7 +71,7 @@ export const textContainer = {
     transition: {
       duration:0.2,
       ease:"linear",
-      delayChildren:0.2
+      delayChildren:0.4
     },
   },
 };
@@ -112,3 +112,4 @@ export const buttonItems={
     }
   }
 }
+

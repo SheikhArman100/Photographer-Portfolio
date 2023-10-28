@@ -1,10 +1,6 @@
 "use client";
-import React from "react";
-import image15 from "@/public/assets/image15.jpg";
-import image16 from "@/public/assets/image16.jpg";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import RevealParagraph from "@/components/RevealParagraph";
+import RevealTitle from "@/components/RevealTitle";
 import {
   ContainerAnimation,
   buttonContainer,
@@ -13,10 +9,18 @@ import {
   imageContainer,
   imageSection,
   imageText,
+  revealAnimation,
+  revealContainer,
+  revealTitleAnimation,
   sectionAnimation,
   textContainer,
   textScaleWrapper,
 } from "@/libs/framer-motion/product.animation";
+import image15 from "@/public/assets/image15.jpg";
+import image16 from "@/public/assets/image16.jpg";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const ProductPhotography = () => {
   return (
@@ -24,7 +28,7 @@ const ProductPhotography = () => {
       variants={sectionAnimation}
       initial="hidden"
       whileInView="view"
-      viewport={{once:true}}
+      viewport={{ margin: "-30%",once:true }}
       className="relative h-screen w-full bg-customOffWhite text-customBlack "
     >
       <motion.div
@@ -98,20 +102,37 @@ const ProductPhotography = () => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  flex flex-col items-center"
       >
         <h4 className="relative font2 uppercase text-customOrange text-base font-semibold flex items-center gap-x-2 text-center">
-          <motion.div variants={textScaleWrapper}  className="absolute w-full h-full bg-customOffWhite origin-right"/>
+          <motion.div
+            variants={textScaleWrapper}
+            className="absolute w-full h-full bg-customOffWhite origin-right"
+          />
           <div className="h-1 w-1 rounded-full bg-customOrange" />
           Product Photography
         </h4>
-        <h2 className="text-6xl font-semibold text-center mt-2">
-          Capturing the <br /> perfect frame for <br /> your product
-        </h2>
-        <p className="font2 text-base font-semibold text-center mt-5">
+        <RevealTitle
+          phrases={["Capturing the", "perfect frame for", "your product"]}
+          phraseStyle="text-6xl font-bold text-center"
+        />
+        <RevealParagraph
+          phrases={[
+            "Compel all your audience & capture the moment light with",
+            "purpose.Capturing emotion through photos",
+          ]}
+          containerStyle="items-center mt-4"
+          phraseStyle="font2 text-base font-semibold  text-center"
+        />
+        {/* <p className="font2 text-base font-bold text-center mt-5 ">
           Compel all your audience & capture the moment light with <br />
           purpose.Capturing emotion through photos
-        </p>
-        <motion.button variants={buttonContainer} className=" py-3 px-6 bg-customYellow  text-sm font2 font-bold uppercase origin-bottom mt-5">
-          <motion.div variants={buttonItems} className="flex items-center gap-x-2">
-            
+        </p> */}
+        <motion.button
+          variants={buttonContainer}
+          className=" py-3 px-6 bg-customYellow  text-sm font2 font-bold uppercase origin-bottom mt-5"
+        >
+          <motion.div
+            variants={buttonItems}
+            className="flex items-center gap-x-2"
+          >
             View Project <ArrowRight />
           </motion.div>
         </motion.button>

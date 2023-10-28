@@ -7,11 +7,15 @@ import camera from "@/public/assets/camera.png";
 import { ArrowRight, Play, Sparkle } from "lucide-react";
 import { motion } from "framer-motion";
 import {
+  buttonContainer,
+  buttonItems,
   containerAnimation,
   scaleContainer,
   scaleContainerText,
   sectionAnimation,
+  textScaleContainer,
 } from "@/libs/framer-motion/contactme.animation";
+import RevealTitle from "@/components/RevealTitle";
 
 const ContactMe = () => {
   return (
@@ -39,7 +43,7 @@ const ContactMe = () => {
           variants={sectionAnimation}
           initial="hidden"
           whileInView="view"
-          viewport={{once:true}}
+          viewport={{ margin: "-30%", once:true }}
           className="h-full w-full px-[3rem] lg:px-[6rem] flex items-center justify-between"
         >
           <motion.div
@@ -51,10 +55,11 @@ const ContactMe = () => {
                 “
               </span>
               <p className="text-4xl font-bold mt-[2rem]">
-                Clicking the <br />
-                photos with the
-                <br />
-                <span className="text-customOrange">perfection</span>
+                <RevealTitle phrases={["Clicking the", "photos with the"]} />
+                <RevealTitle
+                  phrases={["perfection"]}
+                  phraseStyle="text-customOrange"
+                />
               </p>
             </div>
             <div className="relative h-48 aspect-square rotate-[35deg] ">
@@ -68,23 +73,45 @@ const ContactMe = () => {
             </div>
           </motion.div>
           <motion.div variants={containerAnimation} className="">
-            <h4 className="font2 uppercase text-customOrange text-sm font-semibold flex items-center gap-x-2 text-center">
+            <h4 className="font2 uppercase text-customOrange text-sm font-semibold flex items-center gap-x-2 text-center relative">
+              <motion.div
+                variants={textScaleContainer}
+                className="absolute w-full h-full bg-customGreen origin-right"
+              />
               <div className="h-1 w-1 rounded-full bg-customOrange" />
               Contact Me
             </h4>
-            <h2 className="text-4xl font-semibold  mt-2">
-              I explore styles <br /> every week, enjoy <br /> my work
-            </h2>
-            <button className=" py-3 px-6 border border-customOffWhite text-sm font2 font-bold uppercase origin-bottom mt-5">
-              <div className="flex items-center gap-x-2">
+            <RevealTitle
+              phrases={[" I explore styles", "every week, enjoy", " my work"]}
+              phraseStyle="text-4xl font-semibold"
+              containerStyle="mt-2"
+            />
+
+            <motion.button
+              variants={buttonContainer}
+              className=" py-3 px-6 border border-customOffWhite text-sm font2 font-bold uppercase  mt-5 origin-left"
+            >
+              <motion.div
+                variants={buttonItems}
+                className="flex items-center gap-x-2"
+              >
                 Book a call <ArrowRight />
-              </div>
-            </button>
+              </motion.div>
+            </motion.button>
           </motion.div>
         </motion.div>
       </div>
-      <motion.div variants={scaleContainer} initial="hidden" whileInView="view" viewport={{once:true}} className="w-full h-[4.5rem] border-t border-b border-customOffWhite origin-left ">
-        <motion.div variants={scaleContainerText} className="h-full flex items-center justify-center gap-x-2">
+      <motion.div
+        variants={scaleContainer}
+        initial="hidden"
+        whileInView="view"
+        viewport={{ once: true }}
+        className="w-full h-[4.5rem] border-t border-b border-customOffWhite origin-left "
+      >
+        <motion.div
+          variants={scaleContainerText}
+          className="h-full flex items-center justify-center gap-x-2"
+        >
           <h3 className="text-3xl  font-semibold">Infographics</h3>
           <Sparkle size={32} className="fill-customOrange stroke-none" />
           <h3 className="text-3xl  font-semibold">Branding</h3>

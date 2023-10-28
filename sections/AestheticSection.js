@@ -14,7 +14,10 @@ import {
   fadeRight,
   fadeTop,
   textContainer,
+  textScaleContainer,
 } from "@/libs/framer-motion/aesthetic.animation";
+import RevealTitle from "@/components/RevealTitle";
+import RevealParagraph from "@/components/RevealParagraph";
 
 const AestheticSection = () => {
   return (
@@ -23,8 +26,9 @@ const AestheticSection = () => {
       initial="hidden"
       whileInView="view"
       viewport={{
-            once:true
-          }}
+        margin: "-30%",
+        once:true
+      }}
       className="h-screen w-full bg-customGreen text-customWhite relative overflow-hidden"
     >
       <motion.div
@@ -52,7 +56,6 @@ const AestheticSection = () => {
           className="h-full w-full object-cover"
           alt="aesthetic pic2"
         />
-        
       </motion.div>
       <motion.div
         variants={fadeTop}
@@ -85,13 +88,20 @@ const AestheticSection = () => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center"
       >
         <span className="text-5xl italic">01</span>
-        <h4 className="font2 uppercase text-customOrange text-base font-semibold mt-3">
-          Aesthetic Shots
-        </h4>
+        <div className="font2 uppercase text-customOrange text-base font-semibold mt-3 relative  w-full ">
+          <h2>Aesthetic Shots</h2>
+          <motion.div
+            variants={textScaleContainer}
+            className="absolute inset-0 w-full h-full bg-customGreen  origin-right"
+          />
+        </div>
 
-        <h2 className="text-5xl font-semibold mt-5">
-          I just shoot cool <br /> photos!
-        </h2>
+        <RevealTitle
+          phrases={["I just shoot cool", "photos!"]}
+          phraseStyle="text-5xl font-semibold"
+          containerStyle="mt-5"
+        />
+
         <div className="h-36 aspect-square border-[0.1rem] border-customOffWhite rounded-full flex flex-col items-center justify-center p-2 mt-4">
           <span className="uppercase font2 text-sm font-semibold">
             Explore gallery
