@@ -104,7 +104,7 @@ const ExperimentalProject = () => {
         variants={containerOpacityAnimation}
         initial="hidden"
         whileInView="view"
-        viewport={{ margin: "-30%",once:true }}
+        viewport={{ margin: "-30%", once: true }}
         className="relative w-full h-full grid grid-cols-2"
       >
         <div className="flex flex-col justify-center  pl-[4rem] lg:pl-[7rem] ">
@@ -122,13 +122,12 @@ const ExperimentalProject = () => {
           />
           <RevealParagraph
             phrases={[
-              "Young woman and one black man, in vibrant",
-              "dress in slow motion in a rose-strewn field.",
-              "Her hair blowing softly in the breeze, with a",
-              "topper borrowed from a Bernie Sanders.",
+              "Young woman and one black man, in vibrant dress in slow motion",
+              "in a rose-strewn field. Her hair blowing softly in the breeze,",
+              "with a topper borrowed from a Bernie Sanders.",
             ]}
             phraseStyle="font2 text-sm font-semibold "
-            containerStyle="mt-4"
+            containerStyle="mt-5"
           />
           <div className="mt-8 flex items-center justify-between">
             <motion.button
