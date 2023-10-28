@@ -66,6 +66,20 @@ export const textContainer = {
     transition: {
       duration: 0.4,
       ease: "linear",
+      delayChildren:0.4,
+      staggerChildren:0.3
+    },
+  },
+};
+export const textScaleContainer = {
+  hidden: {
+    scaleX: 1,
+  },
+  view: {
+    scaleX: 0,
+    transition: {
+      duration: 2,
+      ease: "linear",
     },
   },
 };

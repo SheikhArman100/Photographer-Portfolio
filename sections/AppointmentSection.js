@@ -22,7 +22,7 @@ const AppointmentSection = () => {
       variants={sectionAnimation}
       initial="hidden"
       whileInView="view"
-      viewport={{once:true}}
+      viewport={{margin:"-30%",once:true}}
       className="h-screen w-full bg-customOffWhite text-customBlack relative flex flex-col"
     >
       <motion.div

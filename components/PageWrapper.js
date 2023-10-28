@@ -31,6 +31,7 @@ const PageWrapper = ({ children }) => {
             variants={staggerContainer(0.2, 0.5)}
             initial="hidden"
             animate="show"
+           
             className="w-full min-h-screen "
           >
             {children}
