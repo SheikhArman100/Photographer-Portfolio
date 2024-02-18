@@ -1,31 +1,28 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
-import React from "react";
-import camera from "@/public/assets/camera.png";
-import {
-  ArrowBigDownIcon,
-  ArrowDown,
-  ArrowRight,
-  Instagram,
-  Play,
-  Sparkle,
-} from "lucide-react";
-import image11 from "@/public/assets/image11.jpg";
-import image9 from "@/public/assets/image9.jpg";
-import image12 from "@/public/assets/image12.png";
-import circleTextImage from "@/public/assets/circleText.svg";
-import { motion } from "framer-motion";
 import {
   bottomCircle,
   bottomCircleText,
   bottomContainer,
   bottomSubContainer,
-  bottomText,
   middleContainer,
-  middleContainerItems,
+  middleContainerItems
 } from "@/libs/framer-motion/heroSection.animation";
+import camera from "@/public/assets/camera.png";
+import circleTextImage from "@/public/assets/circleText.svg";
+import image11 from "@/public/assets/image11.jpg";
+import image12 from "@/public/assets/image12.png";
+import image9 from "@/public/assets/image9.jpg";
+import { motion } from "framer-motion";
+import {
+  ArrowDown,
+  ArrowRight,
+  Instagram,
+  Play,
+  Sparkle
+} from "lucide-react";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
