@@ -1,22 +1,22 @@
 export const navItems=[
     {
-        name:"About",
-        link:"/"
-    },
-    {
-        name:"Portfolio",
-        link:"/"
-    },
-    {
         name:"Projects",
-        link:"/"
+        link:"#projects"
     },
     {
-        name:"Blog",
-        link:"/"
+        name:"Gallery",
+        link:"#gallery"
     },
     {
-        name:"Studio",
-        link:"/"
+        name:"Appointment",
+        link:"#appointment"
+    },
+    {
+        name:"Photography",
+        link:"#photography"
+    },
+    {
+        name:"Contact me",
+        link:"#contact_me"
     }
 ]

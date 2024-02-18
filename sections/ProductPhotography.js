@@ -28,6 +28,7 @@ const ProductPhotography = () => {
       variants={sectionAnimation}
       initial="hidden"
       whileInView="view"
+      id="photography"
       viewport={{ margin: "-30%",once:true }}
       className="relative h-screen w-full bg-customOffWhite text-customBlack "
     >

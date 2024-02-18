@@ -23,6 +23,7 @@ const AppointmentSection = () => {
       initial="hidden"
       whileInView="view"
       viewport={{margin:"-30%",once:true}}
+      id="appointment"
       className="h-screen w-full bg-customOffWhite text-customBlack relative flex flex-col"
     >
       <motion.div

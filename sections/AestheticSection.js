@@ -29,6 +29,7 @@ const AestheticSection = () => {
         margin: "-30%",
         once:true
       }}
+      id="gallery"
       className="h-screen w-full bg-customGreen text-customWhite relative overflow-hidden"
     >
       <motion.div

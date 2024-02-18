@@ -19,7 +19,7 @@ import RevealTitle from "@/components/RevealTitle";
 
 const ContactMe = () => {
   return (
-    <section className=" h-screen w-full bg-customGreen text-customWhite flex flex-col">
+    <section id="contact_me" className=" h-screen w-full bg-customGreen text-customWhite flex flex-col">
       <div className="relative flex-[1_1_100%]">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[18rem] h-[75%] rounded-full rotate-12">
           <Image

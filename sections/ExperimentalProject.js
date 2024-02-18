@@ -27,6 +27,7 @@ const ExperimentalProject = () => {
       initial="hidden"
       whileInView="view"
       viewport={{ once: true }}
+      id="projects"
       className="h-screen w-full bg-customOffWhite text-customBlack flex flex-col "
     >
       <div className="w-full h-16 flex items-center justify-between origin-right ">
